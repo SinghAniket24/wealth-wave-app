@@ -65,7 +65,7 @@ class AuthService {
   Future<String?> signInWithGoogle() async {
     try {
       final GoogleSignIn googleSignIn = GoogleSignIn(
-        clientId: "56664279631-4761uhl81sc9oqe1m3o14td90q3a47tc.apps.googleusercontent.com", // 🔥 Add Web Client ID here
+        clientId: "", // 🔥 Add Web Client ID here
         scopes: ['email'],
       );
 
