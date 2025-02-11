@@ -29,15 +29,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
       _emailController.text.trim(),
       _passwordController.text.trim(),
       _nameController.text.trim(),
+      "", // ✅ Added empty string for the profile image URL
     );
 
     setState(() => _isLoading = false);
 
     if (result == null) {
-      // Successfully signed up
       _showVerificationDialog();
     } else {
-      // Display error message
       setState(() => _errorMessage = result);
     }
   }

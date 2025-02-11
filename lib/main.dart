@@ -38,7 +38,8 @@ class AuthWrapper extends StatelessWidget {
       stream: FirebaseAuth.instance.authStateChanges(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Scaffold(body: Center(child: CircularProgressIndicator()));
+          return const Scaffold(
+              body: Center(child: CircularProgressIndicator()));
         } else if (snapshot.hasData) {
           User? user = snapshot.data;
           if (user != null && !user.emailVerified) {
@@ -65,6 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
   User? user = FirebaseAuth.instance.currentUser;
   String userName = "User";
   String userEmail = "";
+  String userPhotoUrl = "";
 
   @override
   void initState() {
@@ -73,14 +75,13 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _fetchUserData() async {
-    if (user != null) {
-      var userDoc = await FirebaseFirestore.instance.collection('users').doc(user!.uid).get();
-      if (userDoc.exists) {
-        setState(() {
-          userName = userDoc["name"] ?? "User";
-          userEmail = userDoc["email"] ?? "";
-        });
-      }
+    User? currentUser = FirebaseAuth.instance.currentUser;
+    if (currentUser != null && mounted) {
+      setState(() {
+        userName = currentUser.displayName ?? "User"; // Fetch display name
+        userEmail = currentUser.email ?? ""; // Fetch email
+        userPhotoUrl = currentUser.photoURL ?? ""; // Fetch profile image URL
+      });
     }
   }
 
@@ -110,7 +111,8 @@ class _MyHomePageState extends State<MyHomePage> {
               await FirebaseAuth.instance.signOut();
               Navigator.pushAndRemoveUntil(
                 context,
-                MaterialPageRoute(builder: (context) => const MyApp()), // Restart app flow
+                MaterialPageRoute(
+                    builder: (context) => const MyApp()), // Restart app flow
                 (route) => false,
               );
             },
@@ -133,18 +135,19 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const CircleAvatar(
+                  CircleAvatar(
                     radius: 40,
                     backgroundColor: Colors.white,
-                    child: Icon(
-                      Icons.account_circle,
-                      size: 50,
-                      color: Colors.blue,
-                    ),
+                    backgroundImage:
+                        userPhotoUrl.isNotEmpty ? NetworkImage(userPhotoUrl) : null,
+                    child: userPhotoUrl.isEmpty
+                        ? const Icon(Icons.account_circle,
+                            size: 50, color: Colors.blue)
+                        : null,
                   ),
                   const SizedBox(height: 6),
                   Text(
-                    userName,
+                    userName.isNotEmpty ? userName : "Loading...",
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 18,
@@ -153,7 +156,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   const SizedBox(height: 3),
                   Text(
-                    userEmail,
+                    userEmail.isNotEmpty ? userEmail : "No Email",
                     style: const TextStyle(
                       color: Colors.white70,
                       fontSize: 13,
@@ -172,7 +175,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 await FirebaseAuth.instance.signOut();
                 Navigator.pushAndRemoveUntil(
                   context,
-                  MaterialPageRoute(builder: (context) => const MyApp()), // Restart app flow
+                  MaterialPageRoute(
+                      builder: (context) => const MyApp()), // Restart app flow
                   (route) => false,
                 );
               },

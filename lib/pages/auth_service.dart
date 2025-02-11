@@ -13,12 +13,16 @@ class AuthService {
   User? get currentUser => _auth.currentUser;
 
   // Sign up with email and password
-  Future<String?> signUpWithEmail(String email, String password, String name) async {
+  Future<String?> signUpWithEmail(String email, String password, String name, String photoUrl) async {
     try {
       UserCredential userCredential = await _auth.createUserWithEmailAndPassword(
         email: email,
         password: password,
       );
+
+      // Update user profile with name and photo
+      await userCredential.user?.updateDisplayName(name);
+      await userCredential.user?.updatePhotoURL(photoUrl);
 
       // Send email verification
       await userCredential.user?.sendEmailVerification();
@@ -28,6 +32,7 @@ class AuthService {
         'uid': userCredential.user!.uid,
         'name': name,
         'email': email,
+        'photoUrl': photoUrl,
         'createdAt': FieldValue.serverTimestamp(),
       });
 
@@ -81,6 +86,7 @@ class AuthService {
           'uid': userCredential.user!.uid,
           'name': userCredential.user!.displayName ?? "User",
           'email': userCredential.user!.email,
+          'photoUrl': userCredential.user!.photoURL ?? "",
           'createdAt': FieldValue.serverTimestamp(),
         });
       }
@@ -101,12 +107,14 @@ class AuthService {
     }
   }
 
-  // Update user profile (name)
-  Future<String?> updateProfile(String name) async {
+  // Update user profile (name and photo)
+  Future<String?> updateProfile(String name, String photoUrl) async {
     try {
       await _auth.currentUser!.updateDisplayName(name);
+      await _auth.currentUser!.updatePhotoURL(photoUrl);
       await _firestore.collection('users').doc(_auth.currentUser!.uid).update({
         'name': name,
+        'photoUrl': photoUrl,
       });
       return null; // Success
     } catch (e) {
