@@ -7,36 +7,34 @@ class NewsPage extends StatefulWidget {
   const NewsPage({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
   _NewsPageState createState() => _NewsPageState();
 }
- class _NewsPageState extends State<NewsPage> {
-  final String apiKey = 'cudkg6pr01qigebr4vu0cudkg6pr01qigebr4vug'; //api key finnhub
+
+class _NewsPageState extends State<NewsPage> {
+  final String apiKey = 'cujchr9r01qm7p9nrddgcujchr9r01qm7p9nrde0';
   List<dynamic> newsList = [];
+  bool isLoading = true;
 
-  // Function to fetch NSE stock news from Finnhub
   Future<void> fetchNews() async {
-    final String url =
-        'https://finnhub.io/api/v1/news?category=nse&token=$apiKey';
-
+    final String url = 'https://finnhub.io/api/v1/news?category=general&token=$apiKey';
     try {
       final response = await http.get(Uri.parse(url));
-
       if (response.statusCode == 200) {
         var data = jsonDecode(response.body);
-
-        // Assign the data directly without filtering out articles without images
         setState(() {
           newsList = data;
+          isLoading = false;
         });
       } else {
         setState(() {
-          newsList = []; // Clear list if an error occurs
+          newsList = [];
+          isLoading = false;
         });
       }
     } catch (e) {
       setState(() {
-        newsList = []; // Clear list in case of an exception
+        newsList = [];
+        isLoading = false;
       });
     }
   }
@@ -44,96 +42,119 @@ class NewsPage extends StatefulWidget {
   @override
   void initState() {
     super.initState();
-    fetchNews(); // Fetch NSE news when the page loads
+    fetchNews();
   }
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Scaffold(
+      backgroundColor: theme.scaffoldBackgroundColor,
       appBar: AppBar(
-        title: const Text('NSE News'),
-        backgroundColor: Colors.blueAccent,
+        title: const Text('Stock Market News', style: TextStyle(fontWeight: FontWeight.bold)),
+        backgroundColor: theme.appBarTheme.backgroundColor,
+        centerTitle: true,
+        elevation: 0,
       ),
-      body: newsList.isEmpty
-          ? const Center(child: CircularProgressIndicator()) // Loading indicator
-          : ListView.builder(
-              itemCount: newsList.length,
-              itemBuilder: (context, index) {
-                var article = newsList[index];
-
-                return Card(
-                  elevation: 8,
-                  margin:
-                      const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+      body: isLoading
+          ? const Center(child: CircularProgressIndicator())
+          : newsList.isEmpty
+              ? Center(
+                  child: Text(
+                    'No news available',
+                    style: TextStyle(fontSize: 18, color: theme.textTheme.bodyLarge?.color),
                   ),
-                  child: ListTile(
-                    contentPadding: const EdgeInsets.all(10),
-                    leading: article['image'] != null
-                        ? ClipRRect(
-                            borderRadius: BorderRadius.circular(8),
-                            child: Image.network(
-                              article['image'],
-                              width: 100,
-                              height: 100,
-                              fit: BoxFit.cover,
-                              loadingBuilder: (context, child, loadingProgress) {
-                                if (loadingProgress == null) {
-                                  return child;
-                                } else {
-                                  return const Center(
-                                      child: CircularProgressIndicator());
-                                }
-                              },
-                              errorBuilder: (context, error, stackTrace) {
-                                return ClipRRect(
-                                  borderRadius: BorderRadius.circular(8),
-                                  child: Image.asset(
-                                    'error.webp', // Placeholder image in case of error
-                                    width: 100,
-                                    height: 100,
-                                    fit: BoxFit.cover,
-                                  ),
-                                );
-                              },
+                )
+              : ListView.builder(
+                  itemCount: newsList.length,
+                  padding: const EdgeInsets.all(12),
+                  itemBuilder: (context, index) {
+                    var article = newsList[index];
+                    return Card(
+                      color: theme.cardColor,
+                      elevation: 5,
+                      margin: const EdgeInsets.symmetric(vertical: 8),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(8),
+                              child: article['image'] != null && article['image'].isNotEmpty
+                                  ? Image.network(
+                                      article['image'],
+                                      height: 100,
+                                      width: 120,
+                                      fit: BoxFit.cover,
+                                      errorBuilder: (context, error, stackTrace) {
+                                        return Image.asset(
+                                          'assets/error.webp',
+                                          height: 100,
+                                          width: 120,
+                                          fit: BoxFit.cover,
+                                        );
+                                      },
+                                    )
+                                  : Image.asset(
+                                      'assets/error.webp',
+                                      height: 100,
+                                      width: 120,
+                                      fit: BoxFit.cover,
+                                    ),
                             ),
-                          )
-                        : null, // Do not show leading if no image
-                    title: Text(
-                      article['headline'],
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                        color: Colors.black87,
+                            const SizedBox(width: 12),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    article['headline'] ?? 'No headline available',
+                                    style: theme.textTheme.headlineSmall,
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                  const SizedBox(height: 8),
+                                  Text(
+                                    article['source'] ?? 'Unknown source',
+                                    style: theme.textTheme.bodySmall,
+                                  ),
+                                  const SizedBox(height: 8),
+                                  Align(
+                                    alignment: Alignment.centerRight,
+                                    child: ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+                                        backgroundColor: theme.elevatedButtonTheme.style?.backgroundColor?.resolve({}),
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(8),
+                                        ),
+                                      ),
+                                      onPressed: () => _launchUrl(article['url']),
+                                      child: const Text('Read More About The Article'),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                    subtitle: Text(
-                      article['source'],
-                      style: const TextStyle(
-                        fontSize: 14,
-                        color: Colors.grey,
-                      ),
-                    ),
-                    onTap: () {
-                      // Open the full article in browser
-                      _launchUrl(article['url']);
-                    },
-                  ),
-                );
-              },
-            ),
+                    );
+                  },
+                ),
     );
   }
 
-  // Function to launch URL in the browser
-  void _launchUrl(String url) async {
-    // ignore: deprecated_member_use
-    if (await canLaunch(url)) {
-      // ignore: deprecated_member_use
-      await launch(url);
+  void _launchUrl(String? url) async {
+    if (url == null || url.isEmpty) return;
+    Uri uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
     } else {
-      throw 'Could not open the URL: $url';
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Could not open the URL: $url')),
+      );
     }
   }
 }

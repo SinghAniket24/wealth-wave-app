@@ -1,49 +1,62 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'firebase_options.dart'; // Ensure Firebase options are correctly imported
-import 'pages/home_page.dart';
+import 'package:provider/provider.dart';
+import 'package:stocks/splash_screen.dart';
+import 'firebase_options.dart';
+import 'pages/about_page.dart';
 import 'pages/watchlist_page.dart';
 import 'pages/trends_page.dart';
-import 'pages/news_page.dart';
 import 'pages/sign_up.dart';
+import 'pages/location.dart';
+import 'pages/setting.dart';
+import 'pages/news_page.dart';
+import 'pages/home_page.dart';
+import 'pages/theme_provider.dart'; // Import your ThemeProvider
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Stock App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: AuthWrapper(),
+      theme: themeProvider.lightTheme, // Use the lightTheme from ThemeProvider
+      darkTheme: themeProvider.darkTheme, // Use the darkTheme from ThemeProvider
+      themeMode: themeProvider.isDarkMode ? ThemeMode.dark : ThemeMode.light, // Use ThemeMode
+      home: const SplashScreen(),
     );
   }
 }
 
 class AuthWrapper extends StatelessWidget {
+  const AuthWrapper({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<User?>(
       stream: FirebaseAuth.instance.authStateChanges(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Scaffold(
-              body: Center(child: CircularProgressIndicator()));
+          return const Scaffold(body: Center(child: CircularProgressIndicator()));
         } else if (snapshot.hasData) {
           User? user = snapshot.data;
           if (user != null && !user.emailVerified) {
-            return VerifyEmailScreen(); // Redirect to email verification screen
+            return const VerifyEmailScreen();
           }
           return const MyHomePage();
         } else {
@@ -55,7 +68,7 @@ class AuthWrapper extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -63,7 +76,6 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
-  User? user = FirebaseAuth.instance.currentUser;
   String userName = "User";
   String userEmail = "";
   String userPhotoUrl = "";
@@ -74,13 +86,24 @@ class _MyHomePageState extends State<MyHomePage> {
     _fetchUserData();
   }
 
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _fetchUserData();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
   void _fetchUserData() async {
     User? currentUser = FirebaseAuth.instance.currentUser;
-    if (currentUser != null && mounted) {
+    if (mounted) {
       setState(() {
-        userName = currentUser.displayName ?? "User"; // Fetch display name
-        userEmail = currentUser.email ?? ""; // Fetch email
-        userPhotoUrl = currentUser.photoURL ?? ""; // Fetch profile image URL
+        userName = currentUser?.displayName ?? "User";
+        userEmail = currentUser?.email ?? "";
+        userPhotoUrl = currentUser?.photoURL ?? "";
       });
     }
   }
@@ -94,140 +117,158 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<Widget> _pages = [
     const HomePage(),
     const WatchlistPage(),
-    TrendsPage(),
+    const TrendsPage(),
     const NewsPage(),
   ];
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context); // Access current theme
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: theme.appBarTheme.backgroundColor, // Use theme's app bar color
         title: const Text('Stock App'),
+        titleTextStyle: theme.appBarTheme.titleTextStyle, // Use theme's text style
         actions: [
           IconButton(
             icon: const Icon(Icons.logout),
+            color: theme.appBarTheme.iconTheme?.color, // Use theme's icon color
             onPressed: () async {
               await FirebaseAuth.instance.signOut();
-              Navigator.pushAndRemoveUntil(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const MyApp()), // Restart app flow
-                (route) => false,
-              );
+              if (mounted) {
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyApp()),
+                  (route) => false,
+                );
+              }
             },
           ),
         ],
       ),
       body: _pages[_selectedIndex],
       drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Color(0xFF1E3C72), Color(0xFF2A5298)],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
+        child: SingleChildScrollView(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            children: <Widget>[
+              DrawerHeader(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                      theme.primaryColor, // Use theme's primary color
+                      theme.primaryColor.withOpacity(0.8),
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    CircleAvatar(
+                      radius: 40,
+                      backgroundColor: Colors.white,
+                      backgroundImage: userPhotoUrl.isNotEmpty ? NetworkImage(userPhotoUrl) : null,
+                      child: userPhotoUrl.isEmpty
+                          ? const Icon(Icons.account_circle, size: 50, color: Colors.blue)
+                          : null,
+                    ),
+                    const SizedBox(height: 6),
+                    Text(
+                      userName.isNotEmpty ? userName : "Loading...",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(height: 3),
+                    Text(
+                      userEmail.isNotEmpty ? userEmail : "No Email",
+                      style: const TextStyle(
+                        color: Colors.white70,
+                        fontSize: 13,
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  CircleAvatar(
-                    radius: 40,
-                    backgroundColor: Colors.white,
-                    backgroundImage:
-                        userPhotoUrl.isNotEmpty ? NetworkImage(userPhotoUrl) : null,
-                    child: userPhotoUrl.isEmpty
-                        ? const Icon(Icons.account_circle,
-                            size: 50, color: Colors.blue)
-                        : null,
-                  ),
-                  const SizedBox(height: 6),
-                  Text(
-                    userName.isNotEmpty ? userName : "Loading...",
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const SizedBox(height: 3),
-                  Text(
-                    userEmail.isNotEmpty ? userEmail : "No Email",
-                    style: const TextStyle(
-                      color: Colors.white70,
-                      fontSize: 13,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            _buildDrawerItem(Icons.person, 'Profile'),
-            _buildDrawerItem(Icons.location_on, 'Location'),
-            _buildDrawerItem(Icons.settings, 'Settings'),
-            ListTile(
-              leading: const Icon(Icons.logout, color: Colors.black54),
-              title: const Text('Log Out'),
-              onTap: () async {
-                await FirebaseAuth.instance.signOut();
-                Navigator.pushAndRemoveUntil(
+              _buildDrawerItem(Icons.person, 'Profile', context),
+              _buildDrawerItem(Icons.location_on, 'Location', context, () {
+                Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => const MyApp()), // Restart app flow
-                  (route) => false,
+                  MaterialPageRoute(builder: (context) => LocationPage()),
                 );
-              },
-            ),
-            const Divider(),
-            _buildDrawerItem(Icons.help_outline, 'Help & Support'),
-          ],
+              }),
+              _buildDrawerItem(Icons.settings, 'Settings', context, () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SettingsPage()),
+                );
+              }),
+              ListTile(
+                leading: Icon(Icons.logout, color: theme.iconTheme.color),
+                title: Text('Log Out', style: theme.textTheme.bodyLarge),
+                onTap: () async {
+                  await FirebaseAuth.instance.signOut();
+                  if (mounted) {
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(builder: (context) => const MyApp()),
+                      (route) => false,
+                    );
+                  }
+                },
+              ),
+              const Divider(),
+              _buildDrawerItem(Icons.info, 'About', context, () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const AboutPage()),
+                );
+              }),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            label: 'Home',
-            icon: Icon(Icons.home),
-          ),
-          BottomNavigationBarItem(
-            label: 'Watchlist',
-            icon: Icon(Icons.list),
-          ),
-          BottomNavigationBarItem(
-            label: 'Trends',
-            icon: Icon(Icons.trending_up),
-          ),
-          BottomNavigationBarItem(
-            label: 'News',
-            icon: Icon(Icons.new_releases),
-          ),
+          BottomNavigationBarItem(label: 'Home', icon: Icon(Icons.home)),
+          BottomNavigationBarItem(label: 'Watchlist', icon: Icon(Icons.list)),
+          BottomNavigationBarItem(label: 'Trends', icon: Icon(Icons.trending_up)),
+          BottomNavigationBarItem(label: 'News', icon: Icon(Icons.new_releases)),
         ],
         currentIndex: _selectedIndex,
+        selectedItemColor: theme.primaryColor, // Highlight color for selected icon
+        unselectedItemColor: Colors.grey,
         onTap: _onItemTapped,
       ),
     );
   }
 
-  Widget _buildDrawerItem(IconData icon, String title) {
+  Widget _buildDrawerItem(IconData icon, String title, BuildContext context, [VoidCallback? onTap]) {
+    final theme = Theme.of(context);
     return ListTile(
-      leading: Icon(icon, color: Colors.black54),
-      title: Text(title),
-      onTap: () {
-        Navigator.pop(context);
-      },
+      leading: Icon(icon, color: theme.iconTheme.color),
+      title: Text(title, style: theme.textTheme.bodyLarge),
+      onTap: onTap ?? () => Navigator.pop(context),
     );
   }
 }
 
-// This screen will handle email verification before allowing login
-class VerifyEmailScreen extends StatelessWidget {
+class VerifyEmailScreen extends StatefulWidget {
+  const VerifyEmailScreen({Key? key}) : super(key: key);
+
+  @override
+  VerifyEmailScreenState createState() => VerifyEmailScreenState();
+}
+
+class VerifyEmailScreenState extends State<VerifyEmailScreen> {
   @override
   Widget build(BuildContext context) {
-    User? user = FirebaseAuth.instance.currentUser;
-
     return Scaffold(
       appBar: AppBar(title: const Text("Verify Your Email")),
       body: Padding(
@@ -243,12 +284,15 @@ class VerifyEmailScreen extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () async {
+                User? user = FirebaseAuth.instance.currentUser; // Get the updated user
                 await user?.reload();
                 if (user?.emailVerified ?? false) {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => const MyHomePage()),
-                  );
+                  if (mounted) {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => const MyHomePage()),
+                    );
+                  }
                 }
               },
               child: const Text("I've Verified"),
@@ -256,10 +300,13 @@ class VerifyEmailScreen extends StatelessWidget {
             const SizedBox(height: 10),
             ElevatedButton(
               onPressed: () async {
+                User? user = FirebaseAuth.instance.currentUser;
                 await user?.sendEmailVerification();
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text("Verification email resent.")),
-                );
+                if (mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text("Verification email resent.")),
+                  );
+                }
               },
               child: const Text("Resend Email"),
             ),

@@ -28,8 +28,8 @@ class AuthService {
       await userCredential.user?.sendEmailVerification();
 
       // Store user data in Firestore
-      await _firestore.collection('users').doc(userCredential.user!.uid).set({
-        'uid': userCredential.user!.uid,
+      await _firestore.collection('users').doc(userCredential.user?.uid).set({
+        'uid': userCredential.user?.uid,
         'name': name,
         'email': email,
         'photoUrl': photoUrl,
@@ -37,8 +37,16 @@ class AuthService {
       });
 
       return null; // Success
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'weak-password') {
+        return 'The password provided is too weak.';
+      } else if (e.code == 'email-already-in-use') {
+        return 'The account already exists for that email.';
+      } else {
+        return 'An error occurred: ${e.message}';
+      }
     } catch (e) {
-      return e.toString();
+      return 'An unexpected error occurred: $e';
     }
   }
 
@@ -51,13 +59,15 @@ class AuthService {
       );
 
       // Check if email is verified
-      if (!userCredential.user!.emailVerified) {
+      if (userCredential.user?.emailVerified == false) {
         return "Please verify your email before signing in.";
       }
 
       return null; // Success
+    } on FirebaseAuthException catch (e) {
+       return 'An error occurred: ${e.message}';
     } catch (e) {
-      return e.toString();
+      return 'An unexpected error occurred: $e';
     }
   }
 
@@ -65,7 +75,7 @@ class AuthService {
   Future<String?> signInWithGoogle() async {
     try {
       final GoogleSignIn googleSignIn = GoogleSignIn(
-        clientId: "", // 🔥 Add Web Client ID here
+        clientId: "56664279631-4761uhl81sc9oqe1m3o14td90q3a47tc.apps.googleusercontent.com", // 🔥 Add Web Client ID here
         scopes: ['email'],
       );
 
@@ -81,19 +91,21 @@ class AuthService {
       UserCredential userCredential = await _auth.signInWithCredential(credential);
 
       // Check if new user, then store data
-      if (userCredential.additionalUserInfo!.isNewUser) {
-        await _firestore.collection('users').doc(userCredential.user!.uid).set({
-          'uid': userCredential.user!.uid,
-          'name': userCredential.user!.displayName ?? "User",
-          'email': userCredential.user!.email,
-          'photoUrl': userCredential.user!.photoURL ?? "",
+      if (userCredential.additionalUserInfo?.isNewUser == true) {
+        await _firestore.collection('users').doc(userCredential.user?.uid).set({
+          'uid': userCredential.user?.uid,
+          'name': userCredential.user?.displayName ?? "User",
+          'email': userCredential.user?.email,
+          'photoUrl': userCredential.user?.photoURL ?? "",
           'createdAt': FieldValue.serverTimestamp(),
         });
       }
 
       return null; // Success
-    } catch (e) {
-      return e.toString();
+    }  on FirebaseAuthException catch (e) {
+       return 'An error occurred: ${e.message}';
+    }catch (e) {
+      return 'An unexpected error occurred: $e';
     }
   }
 
@@ -102,29 +114,42 @@ class AuthService {
     try {
       await _auth.sendPasswordResetEmail(email: email);
       return null; // Success
+    }  on FirebaseAuthException catch (e) {
+       return 'An error occurred: ${e.message}';
     } catch (e) {
-      return e.toString();
+      return 'An unexpected error occurred: $e';
     }
   }
 
   // Update user profile (name and photo)
   Future<String?> updateProfile(String name, String photoUrl) async {
+    final user = _auth.currentUser;
+    if (user == null) {
+      return "No user currently signed in.";
+    }
     try {
-      await _auth.currentUser!.updateDisplayName(name);
-      await _auth.currentUser!.updatePhotoURL(photoUrl);
-      await _firestore.collection('users').doc(_auth.currentUser!.uid).update({
+      await user.updateDisplayName(name);
+      await user.updatePhotoURL(photoUrl);
+      await _firestore.collection('users').doc(user.uid).update({
         'name': name,
         'photoUrl': photoUrl,
       });
       return null; // Success
+    }  on FirebaseAuthException catch (e) {
+       return 'An error occurred: ${e.message}';
     } catch (e) {
-      return e.toString();
+      return 'An unexpected error occurred: $e';
     }
   }
 
   // Sign out function
   Future<void> signOut() async {
-    await GoogleSignIn().signOut();
+     final GoogleSignIn googleSignIn = GoogleSignIn();
+      try {
+        await googleSignIn.signOut(); // This clears the credentials
+      } catch (error) {
+        print(error);
+      }
     await _auth.signOut();
   }
 }
