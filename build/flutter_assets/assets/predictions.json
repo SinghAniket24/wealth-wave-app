@@ -1,0 +1,1766 @@
+{
+    "Reliance": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 1304.9873976915028
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 1304.393977333209
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 1303.8005569749155
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 1303.207136616622
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 1302.6137162583282
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 1302.0202959000346
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 1301.426875541741
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 1300.8334551834475
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 1300.2400348251538
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 1299.6466144668602
+        }
+    ],
+    "Wipro": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 288.9777556994839
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 289.1523671090776
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 289.32697851867124
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 289.50158992826493
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 289.67620133785863
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 289.8508127474523
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 290.025424157046
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 290.2000355666397
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 290.3746469762334
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 290.5492583858271
+        }
+    ],
+    "HDFC_Bank": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 1814.177167864255
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 1815.3078913092988
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 1816.4386147543428
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 1817.5693381993867
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 1818.7000616444307
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 1819.8307850894744
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 1820.9615085345183
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 1822.0922319795623
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 1823.2229554246062
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 1824.3536788696501
+        }
+    ],
+    "Infosys": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 1973.2105587780675
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 1974.6840925876195
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 1976.1576263971713
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 1977.631160206723
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 1979.104694016275
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 1980.5782278258268
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 1982.0517616353786
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 1983.5252954449306
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 1984.9988292544824
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 1986.4723630640342
+        }
+    ],
+    "ICICI_Bank": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 1330.6819537438867
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 1331.5045019836653
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 1332.3270502234436
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 1333.149598463222
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 1333.9721467030006
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 1334.7946949427792
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 1335.6172431825576
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 1336.4397914223362
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 1337.2623396621145
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 1338.0848879018931
+        }
+    ],
+    "HUL": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 2618.1431544222464
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 2618.8685800753005
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 2619.594005728355
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 2620.3194313814092
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 2621.0448570344633
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 2621.7702826875175
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 2622.495708340572
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 2623.221133993626
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 2623.9465596466807
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 2624.671985299735
+        }
+    ],
+    "SBI": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 838.096026334101
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 838.3288024847681
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 838.5615786354351
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 838.7943547861021
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 839.0271309367691
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 839.2599070874362
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 839.4926832381033
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 839.7254593887703
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 839.9582355394373
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 840.1910116901043
+        }
+    ],
+    "Airtel": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 1735.1142201048901
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 1736.7324443512675
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 1738.3506685976452
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 1739.9688928440228
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 1741.5871170904004
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 1743.205341336778
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 1744.8235655831554
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 1746.4417898295333
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 1748.0600140759107
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 1749.6782383222883
+        }
+    ],
+    "Larsen_Toubro": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 3669.314653319304
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 3669.798667291803
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 3670.2826812643025
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 3670.7666952368018
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 3671.2507092093015
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 3671.7347231818007
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 3672.2187371543
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 3672.7027511267993
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 3673.186765099299
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 3673.6707790717983
+        }
+    ],
+    "ITC": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 497.19468744813975
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 497.4285719377193
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 497.66245642729893
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 497.89634091687856
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 498.1302254064582
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 498.36410989603775
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 498.59799438561737
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 498.831878875197
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 499.06576336477656
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 499.2996478543562
+        }
+    ],
+    "Bajaj_Finance": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 7149.078334870439
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 7150.232654091397
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 7151.386973312355
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 7152.541292533312
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 7153.6956117542695
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 7154.849930975228
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 7156.004250196185
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 7157.158569417143
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 7158.3128886381
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 7159.467207859058
+        }
+    ],
+    "Maruti": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 11879.263245202
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 11878.901247988411
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 11878.539250774824
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 11878.177253561234
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 11877.815256347647
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 11877.453259134058
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 11877.09126192047
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 11876.72926470688
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 11876.367267493291
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 11876.005270279704
+        }
+    ],
+    "Asian_Paints": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 2635.653604686982
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 2634.5519931226963
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 2633.4503815584108
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 2632.348769994125
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 2631.2471584298396
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 2630.145546865554
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 2629.043935301269
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 2627.9423237369833
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 2626.8407121726977
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 2625.739100608412
+        }
+    ],
+    "UltraTech_Cement": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 11835.343680478267
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 11841.135025881274
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 11846.92637128428
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 11852.717716687286
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 11858.509062090292
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 11864.300407493298
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 11870.091752896305
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 11875.883098299311
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 11881.674443702319
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 11887.465789105325
+        }
+    ],
+    "NTPC": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 386.7201480732483
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 386.8332678901418
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 386.94638770703534
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 387.0595075239288
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 387.1726273408223
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 387.28574715771583
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 387.39886697460935
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 387.51198679150286
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 387.6251066083964
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 387.7382264252899
+        }
+    ],
+    "Sun_Pharma": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 1897.2901108649874
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 1898.5121830015958
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 1899.734255138204
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 1900.9563272748123
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 1902.1783994114207
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 1903.400471548029
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 1904.6225436846373
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 1905.8446158212455
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 1907.066687957854
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 1908.2887600944623
+        }
+    ],
+    "Axis_Bank": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 1159.1296179592555
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 1159.2245885955963
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 1159.319559231937
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 1159.414529868278
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 1159.5095005046187
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 1159.6044711409595
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 1159.6994417773003
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 1159.794412413641
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 1159.889383049982
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 1159.9843536863227
+        }
+    ],
+    "HCL_Technologies": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 1897.7761404826806
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 1899.2115827932703
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 1900.64702510386
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 1902.0824674144496
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 1903.5179097250393
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 1904.953352035629
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 1906.3887943462187
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 1907.8242366568084
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 1909.259678967398
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 1910.6951212779877
+        }
+    ],
+    "Bajaj_Auto": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 10211.821330634259
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 10216.11167380848
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 10220.402016982702
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 10224.692360156921
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 10228.982703331143
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 10233.273046505363
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 10237.563389679584
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 10241.853732853804
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 10246.144076028026
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 10250.434419202245
+        }
+    ],
+    "PowerGrid": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 337.7524312626572
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 337.9121459873517
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 338.07186071204626
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 338.23157543674085
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 338.3912901614354
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 338.55100488612993
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 338.71071961082447
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 338.870434335519
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 339.03014906021355
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 339.1898637849081
+        }
+    ],
+    "Mahindra_Mahindra": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 3296.947817860654
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 3300.852262127217
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 3304.7567063937795
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 3308.661150660342
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 3312.565594926905
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 3316.4700391934675
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 3320.37448346003
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 3324.278927726593
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 3328.1833719931556
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 3332.0878162597182
+        }
+    ],
+    "Adani_Green": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 1305.5526679704199
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 1303.4891637712303
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 1301.4256595720406
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 1299.3621553728508
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 1297.2986511736613
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 1295.2351469744717
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 1293.171642775282
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 1291.1081385760924
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 1289.0446343769026
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 1286.981130177713
+        }
+    ],
+    "Grasim": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 2733.1369723929715
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 2734.4540069826016
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 2735.771041572232
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 2737.088076161863
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 2738.405110751493
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 2739.7221453411235
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 2741.0391799307536
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 2742.356214520384
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 2743.6732491100142
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 2744.990283699645
+        }
+    ],
+    "Divis_Laboratories": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 6337.295057670857
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 6345.80252169593
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 6354.309985721004
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 6362.817449746079
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 6371.324913771152
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 6379.832377796225
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 6388.339841821299
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 6396.847305846373
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 6405.3547698714465
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 6413.862233896521
+        }
+    ],
+    "Shree_Cement": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 25641.809552368468
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 25640.268536247117
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 25638.72752012576
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 25637.18650400441
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 25635.64548788306
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 25634.104471761708
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 25632.563455640357
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 25631.022439519005
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 25629.48142339765
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 25627.9404072763
+        }
+    ],
+    "Tata_Motors": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 835.7578653431783
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 835.2133533905564
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 834.6688414379346
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 834.1243294853127
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 833.5798175326909
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 833.035305580069
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 832.4907936274471
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 831.9462816748253
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 831.4017697222034
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 830.8572577695816
+        }
+    ],
+    "Dr_Reddy_Laboratories": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 1332.2102971331235
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 1332.5197004089591
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 1332.8291036847947
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 1333.1385069606304
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 1333.447910236466
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 1333.7573135123016
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 1334.0667167881372
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 1334.3761200639728
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 1334.6855233398085
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 1334.994926615644
+        }
+    ],
+    "Tata_Power": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 426.67316778325335
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 426.71152704829467
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 426.749886313336
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 426.78824557837737
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 426.8266048434187
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 426.86496410846
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 426.9033233735014
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 426.9416826385427
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 426.98004190358404
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 427.0184011686254
+        }
+    ],
+    "Tech_Mahindra": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 1789.8516963141442
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 1791.6050019755248
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 1793.3583076369055
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 1795.1116132982859
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 1796.8649189596665
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 1798.618224621047
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 1800.3715302824276
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 1802.1248359438082
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 1803.8781416051888
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 1805.6314472665695
+        }
+    ],
+    "Tata_Steel": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 147.4811020230389
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 147.44972799666064
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 147.4183539702824
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 147.38697994390415
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 147.3556059175259
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 147.32423189114766
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 147.2928578647694
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 147.26148383839114
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 147.2301098120129
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 147.19873578563465
+        }
+    ],
+    "Indian_Oil": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 144.08701830392565
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 144.0087674368461
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 143.93051656976658
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 143.85226570268705
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 143.77401483560752
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 143.69576396852798
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 143.61751310144845
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 143.53926223436892
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 143.4610113672894
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 143.38276050020986
+        }
+    ],
+    "Cipla": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 1558.829172291414
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 1559.1755684564664
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 1559.521964621519
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 1559.8683607865714
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 1560.2147569516242
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 1560.5611531166767
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 1560.9075492817292
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 1561.2539454467817
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 1561.6003416118342
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 1561.946737776887
+        }
+    ],
+    "UPL": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 574.8537081007454
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 575.0782784633686
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 575.3028488259919
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 575.5274191886151
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 575.7519895512382
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 575.9765599138615
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 576.2011302764847
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 576.425700639108
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 576.6502710017312
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 576.8748413643544
+        }
+    ],
+    "Coal_India": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 435.4733952031337
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 435.4358769833985
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 435.3983587636632
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 435.36084054392796
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 435.32332232419276
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 435.2858041044575
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 435.24828588472224
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 435.21076766498703
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 435.17324944525177
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 435.13573122551657
+        }
+    ],
+    "IndusInd_Bank": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 1037.6062861473588
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 1035.990935561315
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 1034.3755849752706
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 1032.7602343892268
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 1031.1448838031824
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 1029.5295332171386
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 1027.9141826310945
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 1026.2988320450504
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 1024.6834814590063
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 1023.0681308729622
+        }
+    ],
+    "JSW_Steel": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 991.2104071930723
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 991.6729544968571
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 992.1355018006419
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 992.5980491044268
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 993.0605964082115
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 993.5231437119963
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 993.9856910157812
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 994.4482383195659
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 994.9107856233508
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 995.3733329271356
+        }
+    ],
+    "Hero_MotoCorp": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 4967.220916991982
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 4967.286477320701
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 4967.35203764942
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 4967.4175979781385
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 4967.483158306857
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 4967.548718635576
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 4967.6142789642945
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 4967.679839293014
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 4967.745399621733
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 4967.810959950451
+        }
+    ],
+    "Tata_Elxsi": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 6829.634538466491
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 6827.528371970164
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 6825.422205473837
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 6823.3160389775085
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 6821.209872481181
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 6819.103705984854
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 6816.997539488527
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 6814.891372992199
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 6812.7852064958715
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 6810.679039999544
+        }
+    ],
+    "Pidilite_Industries": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 3164.999131625645
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 3165.85005146304
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 3166.7009713004354
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 3167.5518911378304
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 3168.4028109752253
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 3169.2537308126202
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 3170.104650650015
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 3170.9555704874106
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 3171.8064903248055
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 3172.6574101622004
+        }
+    ],
+    "Vedanta": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 512.8168254042173
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 513.4636658738352
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 514.1105063434532
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 514.7573468130711
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 515.404187282689
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 516.0510277523069
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 516.6978682219249
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 517.3447086915428
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 517.9915491611607
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 518.6383896307786
+        }
+    ],
+    "Jubilant_FoodWorks": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 716.8750656942889
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 717.6605294002493
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 718.4459931062098
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 719.2314568121703
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 720.0169205181307
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 720.8023842240912
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 721.5878479300516
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 722.373311636012
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 723.1587753419725
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 723.9442390479329
+        }
+    ],
+    "Bharat_Petroleum": [
+        {
+            "Date": "2025-01-25",
+            "Predicted Close Price (INR)": 308.3349206755199
+        },
+        {
+            "Date": "2025-01-26",
+            "Predicted Close Price (INR)": 308.37818803704033
+        },
+        {
+            "Date": "2025-01-27",
+            "Predicted Close Price (INR)": 308.4214553985607
+        },
+        {
+            "Date": "2025-01-28",
+            "Predicted Close Price (INR)": 308.46472276008103
+        },
+        {
+            "Date": "2025-01-29",
+            "Predicted Close Price (INR)": 308.5079901216014
+        },
+        {
+            "Date": "2025-01-30",
+            "Predicted Close Price (INR)": 308.5512574831218
+        },
+        {
+            "Date": "2025-01-31",
+            "Predicted Close Price (INR)": 308.59452484464214
+        },
+        {
+            "Date": "2025-02-01",
+            "Predicted Close Price (INR)": 308.6377922061625
+        },
+        {
+            "Date": "2025-02-02",
+            "Predicted Close Price (INR)": 308.68105956768284
+        },
+        {
+            "Date": "2025-02-03",
+            "Predicted Close Price (INR)": 308.72432692920324
+        }
+    ]
+}
