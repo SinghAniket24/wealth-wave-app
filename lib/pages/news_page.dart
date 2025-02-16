@@ -50,12 +50,12 @@ class _NewsPageState extends State<NewsPage> {
     final theme = Theme.of(context);
     return Scaffold(
       backgroundColor: theme.scaffoldBackgroundColor,
-      appBar: AppBar(
-        title: const Text('Stock Market News', style: TextStyle(fontWeight: FontWeight.bold)),
-        backgroundColor: theme.appBarTheme.backgroundColor,
-        centerTitle: true,
-        elevation: 0,
-      ),
+      // appBar: AppBar(
+      //   title: const Text('Stock Market News', style: TextStyle(fontWeight: FontWeight.bold)),
+      //   backgroundColor: theme.appBarTheme.backgroundColor,
+      //   centerTitle: true,
+      //   elevation: 0,
+      // ),
       body: isLoading
           ? const Center(child: CircularProgressIndicator())
           : newsList.isEmpty

@@ -12,7 +12,9 @@ import 'pages/location.dart';
 import 'pages/setting.dart';
 import 'pages/news_page.dart';
 import 'pages/home_page.dart';
-import 'pages/theme_provider.dart'; // Import your ThemeProvider
+import 'pages/theme_provider.dart';
+import 'pages/Chatbot.dart';
+import 'pages/analysis.dart' ;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -118,7 +120,9 @@ class _MyHomePageState extends State<MyHomePage> {
     const HomePage(),
     const WatchlistPage(),
     const TrendsPage(),
+     StockChatScreen(),
     const NewsPage(),
+   
   ];
 
   @override
@@ -126,9 +130,9 @@ class _MyHomePageState extends State<MyHomePage> {
     final theme = Theme.of(context); // Access current theme
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: theme.appBarTheme.backgroundColor, // Use theme's app bar color
-        title: const Text('Stock App'),
-        titleTextStyle: theme.appBarTheme.titleTextStyle, // Use theme's text style
+          title: const Text('WealthWave', style: TextStyle(color: Colors.white)),
+          backgroundColor: Colors.blueAccent,
+          centerTitle: true,
         actions: [
           IconButton(
             icon: const Icon(Icons.logout),
@@ -224,12 +228,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
               ),
               const Divider(),
+              _buildDrawerItem(Icons.file_copy, 'Analysis', context, () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  AnalysisScreen()),
+                );
+              }),
               _buildDrawerItem(Icons.info, 'About', context, () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const AboutPage()),
                 );
               }),
+              
             ],
           ),
         ),
@@ -238,8 +249,10 @@ class _MyHomePageState extends State<MyHomePage> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(label: 'Home', icon: Icon(Icons.home)),
           BottomNavigationBarItem(label: 'Watchlist', icon: Icon(Icons.list)),
-          BottomNavigationBarItem(label: 'Trends', icon: Icon(Icons.trending_up)),
+          BottomNavigationBarItem(label: 'Search', icon: Icon(Icons.trending_up)),
+          BottomNavigationBarItem(label: 'Chatbot', icon:Icon(Icons.smart_toy)),
           BottomNavigationBarItem(label: 'News', icon: Icon(Icons.new_releases)),
+        
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: theme.primaryColor, // Highlight color for selected icon

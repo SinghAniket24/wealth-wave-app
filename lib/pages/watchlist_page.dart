@@ -10,11 +10,11 @@ class WatchlistPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Watchlist", style: TextStyle(fontWeight: FontWeight.bold)),
-        backgroundColor: theme.appBarTheme.backgroundColor,
-        centerTitle: true,
-      ),
+      // appBar: AppBar(
+      //   title: const Text("Watchlist", style: TextStyle(fontWeight: FontWeight.bold)),
+      //   backgroundColor: theme.appBarTheme.backgroundColor,
+      //   centerTitle: true,
+      // ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: watchlist.isEmpty
