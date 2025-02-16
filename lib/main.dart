@@ -15,6 +15,7 @@ import 'pages/home_page.dart';
 import 'pages/theme_provider.dart';
 import 'pages/Chatbot.dart';
 import 'pages/analysis.dart' ;
+import 'recommendation_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -122,6 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
     const TrendsPage(),
      StockChatScreen(),
     const NewsPage(),
+     RecommendationScreen(),
    
   ];
 
@@ -152,6 +154,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: _pages[_selectedIndex],
       drawer: Drawer(
+ 
         child: SingleChildScrollView(
           child: ListView(
             padding: EdgeInsets.zero,
@@ -252,6 +255,7 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavigationBarItem(label: 'Search', icon: Icon(Icons.trending_up)),
           BottomNavigationBarItem(label: 'Chatbot', icon:Icon(Icons.smart_toy)),
           BottomNavigationBarItem(label: 'News', icon: Icon(Icons.new_releases)),
+          BottomNavigationBarItem(label: 'Suggestions' , icon:Icon(Icons.lightbulb_circle)),
         
         ],
         currentIndex: _selectedIndex,

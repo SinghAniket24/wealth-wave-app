@@ -1,0 +1,1 @@
+ C:\\Users\\anike\\OneDrive\\Documents\\Project_sem4\\Wealth_Wave\\.dart_tool\\flutter_build\\b71217c21db24cdfab936dfa1920c327\\native_assets.yaml: 

@@ -54,13 +54,13 @@ class _StockChatScreenState extends State<StockChatScreen> {
   Map<String, Map<String, dynamic>> lastKnownData = {};
 
   // Gemini setup
-  final String _geminiApiKey = 'AIzaSyBCGYtkK5uj8iUj2mSExcfIV22SylQLPn8'; // Replace with your Gemini API Key
+  final String _geminiApiKey = 'AIzaSyD3-XkdWZhHopvyE_eQ3hjz7e5ehJ63Pk0'; // Replace with your Gemini API Key
   late final GenerativeModel _model;
 
   @override
   void initState() {
     super.initState();
-    _model = GenerativeModel(model: 'gemini-pro', apiKey: _geminiApiKey);
+    _model = GenerativeModel(model: 'gemini-1.5-pro-002', apiKey: _geminiApiKey);
   }
 
   // Function to fetch stock data from Finnhub API
@@ -212,8 +212,8 @@ class _StockChatScreenState extends State<StockChatScreen> {
   Future<String> getGeminiResponse(String prompt) async {
     try {
       // Add your prompt modification here:
-      prompt = "You are a highly skilled stock analyst with expertise in financial modeling and risk assessment. When answering questions, prioritize accuracy and conciseness. For stock-specific data requests, provide a concise overview including: current price, recent changes, a brief outlook (if available), and the source of the data (e.g., Finnhub API). If real-time data is unavailable, clearly state that you are providing the last available data from the Finnhub API. Avoid excessive theoretical explanations and never mention dates. \n\nIf the user asks about mathematical or risk-related aspects (e.g., volatility, correlation, prediction), provide a simplified explanation suitable for a general audience. If calculations are involved, briefly describe the method used. \n\nIf the user asks a question unrelated to the stock market, respond with: 'I am a stock analyst and can only answer questions about stocks.' You are welcome to respond to general greetings and suggestions. If the user asks for 'Nifty company data' or similar, interpret it as a request for information about companies listed on the Nifty 50 index. " +
-          prompt;
+    prompt = "You are a highly skilled and versatile stock market analyst. Your primary goal is to provide accurate, insightful, and actionable information related to stocks and financial markets. Prioritize answering the user's specific question, but also consider providing relevant context or related information that would be helpful to the user. \n\nSpecifically:\n\n*   **Data Requests:** When the user asks for data about a specific stock or financial instrument (e.g., 'What is the price of AAPL?', 'Tell me about TSLA'), attempt to provide a concise overview including current price, recent changes, and a brief outlook if reliable information is available. If real-time data is unavailable, clearly state that you are providing the last available data. If you cannot retrieve real-time data, attempt to provide general information about the company or instrument from your existing knowledge.\n*   **Explanations:** When asked to explain concepts (e.g., 'What is volatility?', 'Explain a P/E ratio'), provide clear, concise explanations suitable for a general audience.  Use examples where appropriate.\n*   **Broad Market Questions:** If the user asks about general market trends, sectors, or investment strategies, provide an overview of the topic, highlighting key factors and potential considerations.\n*   **Unrelated Questions:** If the user asks a question completely unrelated to the stock market or finance, respond with: 'I am a stock market analyst and can only answer questions about stocks and financial markets.'\n*   **Data Source:** If you are providing specific data points (e.g. current stock price) and you are able to retrieve the data from an external API, please state that the data is coming from the Finnhub API. If you are providing general knowledge that is not from the API, do not mention the API.\n*   **Nifty 50:** If the user asks for 'Nifty company data' or similar, interpret it as a request for information about companies listed on the Nifty 50 index.\n*   **If you cannot provide the information requested, politely say that you are unable to do so at this time.**\n\nRemember to prioritize accuracy, conciseness, and helpfulness in your responses. Avoid excessive jargon and theoretical explanations.  Assume the user may not be an expert in finance." + prompt;
+
       final content = [Content.text(prompt)]; // Use Content.text instead
       final response = await _model.generateContent(content);
       return response?.text ??
@@ -246,19 +246,54 @@ class _StockChatScreenState extends State<StockChatScreen> {
       }
     });
   }
+  List<String> recommendationPrompts = [
+     "What is the current price of AAPL?",
+     "Tell me about TSLA.",
+     "What are some Nifty 50 companies?",
+     "Explain volatility in stocks.",
+   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text("Stock Chatbot"),
-      //   backgroundColor: Colors.blue[700],
-      //   titleTextStyle: TextStyle(
-      //       color: Colors.white, fontSize: 20, fontWeight: FontWeight.w500),
-      //   centerTitle: true,
-      // ),
+      appBar: AppBar(
+        title: Text("Stock Chatbot"),
+        backgroundColor: Colors.blue[700],
+        titleTextStyle: TextStyle(
+            color: Colors.white, fontSize: 20, fontWeight: FontWeight.w500),
+        centerTitle: true,
+        elevation: 5.0, // Add elevation for the 3D effect
+        shadowColor: Colors.blue[900], // Add a shadow color
+        shape: RoundedRectangleBorder( // Optional: round the bottom corners
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(15),
+          ),
+        ),
+      ),
       body: Column(
         children: [
+          // Recommendations section
+         Padding(
+           padding: const EdgeInsets.all(8.0),
+           child: Wrap(
+             spacing: 8.0,
+             runSpacing: 4.0, // Add vertical spacing between the texts
+             children: recommendationPrompts.map((prompt) => ElevatedButton(
+               onPressed: () {
+                 _controller.text = prompt; // Populate the text field
+                 handleUserInput(prompt);     // Send the message
+               },
+               child: Text(prompt),
+                style: ElevatedButton.styleFrom( // Add some styling
+                  padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  textStyle: TextStyle(fontSize: 14),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+             )).toList(),
+           ),
+         ),
           Expanded(
             child: ListView.builder(
               controller: _scrollController, // Add the controller here

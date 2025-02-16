@@ -8,6 +8,12 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "animate_do",
+      "rootUri": "file:///C:/Users/anike/AppData/Local/Pub/Cache/hosted/pub.dev/animate_do-4.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
       "name": "app_settings",
       "rootUri": "file:///C:/Users/anike/AppData/Local/Pub/Cache/hosted/pub.dev/app_settings-5.2.0",
       "packageUri": "lib/",
@@ -224,6 +230,18 @@
       "languageVersion": "3.3"
     },
     {
+      "name": "flutter_animate",
+      "rootUri": "file:///C:/Users/anike/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_animate-4.5.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "flutter_colorpicker",
+      "rootUri": "file:///C:/Users/anike/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_colorpicker-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "flutter_form_builder",
       "rootUri": "file:///C:/Users/anike/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_form_builder-9.7.0",
       "packageUri": "lib/",
@@ -288,6 +306,12 @@
       "rootUri": "file:///C:/Users/anike/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.24",
       "packageUri": "lib/",
       "languageVersion": "3.5"
+    },
+    {
+      "name": "flutter_shaders",
+      "rootUri": "file:///C:/Users/anike/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_shaders-0.1.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
     },
     {
       "name": "flutter_test",
@@ -532,6 +556,12 @@
     {
       "name": "quantity",
       "rootUri": "file:///C:/Users/anike/AppData/Local/Pub/Cache/hosted/pub.dev/quantity-3.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "responsive_framework",
+      "rootUri": "file:///C:/Users/anike/AppData/Local/Pub/Cache/hosted/pub.dev/responsive_framework-1.5.1",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -806,7 +836,7 @@
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2025-02-16T10:46:18.662423Z",
+  "generated": "2025-03-09T10:41:16.515676Z",
   "generator": "pub",
   "generatorVersion": "3.6.1",
   "flutterRoot": "file:///C:/Users/anike/Downloads/flutter_windows_3.24.5-stable/flutter",

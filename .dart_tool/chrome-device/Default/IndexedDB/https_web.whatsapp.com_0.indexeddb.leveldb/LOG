@@ -1,0 +1,57 @@
+2025/02/17-08:52:10.199 7684 Reusing MANIFEST C:\Users\anike\AppData\Local\Temp\flutter_tools.430fa6b7\flutter_tools_chrome_device.c2a88d5f\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/02/17-08:52:10.201 7684 Recovering log #945
+2025/02/17-08:52:10.205 7684 Reusing old log C:\Users\anike\AppData\Local\Temp\flutter_tools.430fa6b7\flutter_tools_chrome_device.c2a88d5f\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000945.log 
+2025/02/17-08:52:32.863 ecbc Level-0 table #961: started
+2025/02/17-08:52:32.872 ecbc Level-0 table #961: 100311 bytes OK
+2025/02/17-08:52:32.874 ecbc Delete type=0 #945
+2025/02/17-08:52:32.876 ecbc Manual compaction at level-0 from '\x00\x18\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x19\x00\x00\x00' @ 0 : 0; will stop at '\x00\x18\x00\x00\x05' @ 3196167 : 1
+2025/02/17-08:52:32.877 ecbc Compacting 1@0 + 1@1 files
+2025/02/17-08:52:32.884 ecbc Generated table #962@0: 1817 keys, 39250 bytes
+2025/02/17-08:52:32.904 ecbc Generated table #963@0: 10718 keys, 301054 bytes
+2025/02/17-08:52:32.904 ecbc Compacted 1@0 + 1@1 files => 340304 bytes
+2025/02/17-08:52:32.905 ecbc compacted to: files[ 0 2 27 0 0 0 0 ]
+2025/02/17-08:52:32.906 ecbc Delete type=2 #961
+2025/02/17-08:52:32.907 ecbc Manual compaction at level-0 from '\x00\x18\x00\x00\x05' @ 3196167 : 1 .. '\x00\x19\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/02/17-08:52:37.107 7684 Compacting 1@1 + 10@2 files
+2025/02/17-08:52:37.206 7684 Generated table #964@1: 45315 keys, 2203871 bytes
+2025/02/17-08:52:37.329 7684 Generated table #965@1: 52084 keys, 2215552 bytes
+2025/02/17-08:52:37.376 7684 Generated table #966@1: 2374 keys, 2161648 bytes
+2025/02/17-08:52:37.414 7684 Generated table #967@1: 2523 keys, 2158715 bytes
+2025/02/17-08:52:37.468 7684 Generated table #968@1: 2800 keys, 2163390 bytes
+2025/02/17-08:52:37.532 7684 Generated table #969@1: 3653 keys, 2158788 bytes
+2025/02/17-08:52:37.590 7684 Generated table #970@1: 4690 keys, 2157739 bytes
+2025/02/17-08:52:37.698 7684 Generated table #971@1: 30949 keys, 2259372 bytes
+2025/02/17-08:52:37.794 7684 Generated table #972@1: 26395 keys, 2268789 bytes
+2025/02/17-08:52:37.886 7684 Generated table #973@1: 29581 keys, 2079688 bytes
+2025/02/17-08:52:37.886 7684 Compacted 1@1 + 10@2 files => 21827552 bytes
+2025/02/17-08:52:37.888 7684 compacted to: files[ 0 1 27 0 0 0 0 ]
+2025/02/17-08:52:37.890 7684 Delete type=2 #948
+2025/02/17-08:52:37.890 7684 Delete type=2 #949
+2025/02/17-08:52:37.890 7684 Delete type=2 #950
+2025/02/17-08:52:37.890 7684 Delete type=2 #951
+2025/02/17-08:52:37.891 7684 Delete type=2 #952
+2025/02/17-08:52:37.892 7684 Delete type=2 #953
+2025/02/17-08:52:37.892 7684 Delete type=2 #954
+2025/02/17-08:52:37.892 7684 Delete type=2 #955
+2025/02/17-08:52:37.892 7684 Delete type=2 #956
+2025/02/17-08:52:37.892 7684 Delete type=2 #957
+2025/02/17-08:52:37.893 7684 Delete type=2 #958
+2025/02/17-08:52:37.893 7684 Delete type=2 #962
+2025/02/17-08:52:47.622 7684 Compacting 1@1 + 7@2 files
+2025/02/17-08:52:47.683 7684 Generated table #974@1: 8488 keys, 2137028 bytes
+2025/02/17-08:52:47.743 7684 Generated table #975@1: 6663 keys, 2125064 bytes
+2025/02/17-08:52:47.870 7684 Generated table #976@1: 102864 keys, 2253209 bytes
+2025/02/17-08:52:47.991 7684 Generated table #977@1: 100327 keys, 2249943 bytes
+2025/02/17-08:52:48.125 7684 Generated table #978@1: 99611 keys, 2248838 bytes
+2025/02/17-08:52:48.262 7684 Generated table #979@1: 100203 keys, 2249960 bytes
+2025/02/17-08:52:48.359 7684 Generated table #980@1: 76289 keys, 1719682 bytes
+2025/02/17-08:52:48.359 7684 Compacted 1@1 + 7@2 files => 14983724 bytes
+2025/02/17-08:52:48.360 7684 compacted to: files[ 0 0 27 0 0 0 0 ]
+2025/02/17-08:52:48.362 7684 Delete type=2 #928
+2025/02/17-08:52:48.362 7684 Delete type=2 #929
+2025/02/17-08:52:48.362 7684 Delete type=2 #930
+2025/02/17-08:52:48.362 7684 Delete type=2 #931
+2025/02/17-08:52:48.362 7684 Delete type=2 #932
+2025/02/17-08:52:48.363 7684 Delete type=2 #933
+2025/02/17-08:52:48.363 7684 Delete type=2 #934
+2025/02/17-08:52:48.363 7684 Delete type=2 #963

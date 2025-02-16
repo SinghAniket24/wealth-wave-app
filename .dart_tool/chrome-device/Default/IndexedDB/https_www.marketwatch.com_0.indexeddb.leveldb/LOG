@@ -1,0 +1,6 @@
+2025/03/07-20:57:23.876 69cc Creating DB C:\Users\anike\AppData\Local\Temp\flutter_tools.b854e9e8\flutter_tools_chrome_device.fee014b8\Default\IndexedDB\https_www.marketwatch.com_0.indexeddb.leveldb since it was missing.
+2025/03/07-20:57:23.887 69cc Reusing MANIFEST C:\Users\anike\AppData\Local\Temp\flutter_tools.b854e9e8\flutter_tools_chrome_device.fee014b8\Default\IndexedDB\https_www.marketwatch.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/03/07-21:07:40.143 69cc Level-0 table #5: started
+2025/03/07-21:07:40.156 69cc Level-0 table #5: 313723 bytes OK
+2025/03/07-21:07:40.159 69cc Delete type=0 #3
+2025/03/07-21:07:40.161 69cc Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,76 @@
+{
+   "checksum": "51384f60b3ff6f6add5db8728710a04e",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13384581237398554",
+            "date_last_used": "0",
+            "guid": "7fcabdd1-d672-49c7-81fb-7416d52b05f4",
+            "id": "10",
+            "name": "Amazon.co.uk - Online Shopping",
+            "type": "url",
+            "url": "http://www.amazon.com/gp/ubp/oneButton/config/redirectHome?tagbase=hpbk-ubpl&ref=aagateway-edgebook-hp"
+         }, {
+            "date_added": "13384581237398337",
+            "date_last_used": "0",
+            "guid": "c460bd22-8d89-4daf-b1f9-0a9fd4aa4c31",
+            "id": "9",
+            "name": "Agoda",
+            "type": "url",
+            "url": "https://js.redirect.hp.com/jumpstation?bd=agoda&c=231&locale=*&pf=*&tp=edge&TYPE=3"
+         }, {
+            "date_added": "13384581237397985",
+            "date_last_used": "0",
+            "guid": "11c01f40-5a8b-4f24-92a1-bea420426b8a",
+            "id": "8",
+            "name": "Express VPN",
+            "type": "url",
+            "url": "https://js.redirect.hp.com/jumpstation?bd=expressvpn&c=*&locale=en_us&pf=*&s=*&tp=edge"
+         }, {
+            "date_added": "13384581237397697",
+            "date_last_used": "0",
+            "guid": "72143acc-ddc3-4f1c-9e7f-efae4ac0030a",
+            "id": "7",
+            "name": "McAfee Security",
+            "type": "url",
+            "url": "https://www.mcafee.com/consumer/v/browserfav/hp.html"
+         }, {
+            "date_added": "13384581237395015",
+            "date_last_used": "0",
+            "guid": "279202ee-7e12-493a-8c3a-b7976515f06d",
+            "id": "6",
+            "name": "LastPass password manager",
+            "type": "url",
+            "url": "https://js.redirect.hp.com/jumpstation?bd=lastpass&c=231&locale=*&pf=*&tp=edge&TYPE=3"
+         } ],
+         "date_added": "13384581236808316",
+         "date_last_used": "0",
+         "date_modified": "13384581237398554",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13384581236808318",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13384581236808321",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

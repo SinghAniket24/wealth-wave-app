@@ -5,7 +5,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.google.gms:google-services:4.4.2' // ✅ Fixed dependency format
-        classpath "com.android.tools.build:gradle:8.3.0" // ✅ Ensure AGP is updated
+        classpath 'com.android.tools.build:gradle:8.2.1'
     }
 }
 

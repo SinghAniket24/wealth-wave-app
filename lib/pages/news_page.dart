@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
 
 class NewsPage extends StatefulWidget {
-  const NewsPage({super.key});
+  const NewsPage({Key? key}) : super(key: key);
 
   @override
   _NewsPageState createState() => _NewsPageState();
@@ -48,101 +48,121 @@ class _NewsPageState extends State<NewsPage> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final screenWidth = MediaQuery.of(context).size.width;
+
+    // Responsive Text Sizes
+    final headlineFontSize = screenWidth < 360 ? 16.0 : 18.0;
+    final bodyFontSize = screenWidth < 360 ? 12.0 : 14.0;
+
     return Scaffold(
-      backgroundColor: theme.scaffoldBackgroundColor,
       // appBar: AppBar(
-      //   title: const Text('Stock Market News', style: TextStyle(fontWeight: FontWeight.bold)),
-      //   backgroundColor: theme.appBarTheme.backgroundColor,
+      //   title: Text('Stock Market News', style: TextStyle(fontWeight: FontWeight.bold, fontSize: headlineFontSize)),
       //   centerTitle: true,
-      //   elevation: 0,
+      //   backgroundColor: theme.appBarTheme.backgroundColor,
       // ),
-      body: isLoading
-          ? const Center(child: CircularProgressIndicator())
-          : newsList.isEmpty
-              ? Center(
-                  child: Text(
-                    'No news available',
-                    style: TextStyle(fontSize: 18, color: theme.textTheme.bodyLarge?.color),
-                  ),
-                )
-              : ListView.builder(
-                  itemCount: newsList.length,
-                  padding: const EdgeInsets.all(12),
-                  itemBuilder: (context, index) {
-                    var article = newsList[index];
-                    return Card(
-                      color: theme.cardColor,
-                      elevation: 5,
-                      margin: const EdgeInsets.symmetric(vertical: 8),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(12),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(8),
-                              child: article['image'] != null && article['image'].isNotEmpty
-                                  ? Image.network(
-                                      article['image'],
-                                      height: 100,
-                                      width: 120,
-                                      fit: BoxFit.cover,
-                                      errorBuilder: (context, error, stackTrace) {
-                                        return Image.asset(
-                                          'assets/error.webp',
-                                          height: 100,
-                                          width: 120,
-                                          fit: BoxFit.cover,
-                                        );
-                                      },
-                                    )
-                                  : Image.asset(
-                                      'assets/error.webp',
-                                      height: 100,
-                                      width: 120,
-                                      fit: BoxFit.cover,
-                                    ),
-                            ),
-                            const SizedBox(width: 12),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    article['headline'] ?? 'No headline available',
-                                    style: theme.textTheme.headlineSmall,
-                                    maxLines: 2,
-                                    overflow: TextOverflow.ellipsis,
-                                  ),
-                                  const SizedBox(height: 8),
-                                  Text(
-                                    article['source'] ?? 'Unknown source',
-                                    style: theme.textTheme.bodySmall,
-                                  ),
-                                  const SizedBox(height: 8),
-                                  Align(
-                                    alignment: Alignment.centerRight,
-                                    child: ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        backgroundColor: theme.elevatedButtonTheme.style?.backgroundColor?.resolve({}),
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(8),
-                                        ),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Colors.blue[50]!,
+              Colors.blue[100]!,
+            ],
+          ),
+        ),
+        child: isLoading
+            ? const Center(child: CircularProgressIndicator())
+            : newsList.isEmpty
+                ? Center(
+                    child: Text(
+                      'No news available',
+                      style: TextStyle(fontSize: headlineFontSize, color: theme.textTheme.bodyLarge?.color),
+                    ),
+                  )
+                : ListView.builder(
+                    itemCount: newsList.length,
+                    padding: const EdgeInsets.all(12),
+                    itemBuilder: (context, index) {
+                      var article = newsList[index];
+                      return Card(
+                        color: theme.cardColor,
+                        elevation: 5,
+                        margin: const EdgeInsets.symmetric(vertical: 8),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                        child: Padding(
+                          padding: const EdgeInsets.all(12),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(8),
+                                child: article['image'] != null && article['image'].isNotEmpty
+                                    ? Image.network(
+                                        article['image'],
+                                        height: 100,
+                                        width: 120,
+                                        fit: BoxFit.cover,
+                                        errorBuilder: (context, error, stackTrace) {
+                                          return Image.asset(
+                                            'assets/error.webp',
+                                            height: 100,
+                                            width: 120,
+                                            fit: BoxFit.cover,
+                                          );
+                                        },
+                                      )
+                                    : Image.asset(
+                                        'assets/error.webp',
+                                        height: 100,
+                                        width: 120,
+                                        fit: BoxFit.cover,
                                       ),
-                                      onPressed: () => _launchUrl(article['url']),
-                                      child: const Text('Read More About The Article'),
-                                    ),
-                                  ),
-                                ],
                               ),
-                            ),
-                          ],
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      article['headline'] ?? 'No headline available',
+                                      style: TextStyle(
+                                        fontSize: headlineFontSize,
+                                        fontWeight: FontWeight.w500,
+                                        color: theme.textTheme.headlineSmall?.color,
+                                      ),
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                    const SizedBox(height: 8),
+                                    Text(
+                                      article['source'] ?? 'Unknown source',
+                                      style: TextStyle(fontSize: bodyFontSize, color: theme.textTheme.bodySmall?.color),
+                                    ),
+                                    const SizedBox(height: 8),
+                                    Align(
+                                      alignment: Alignment.centerRight,
+                                      child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor: theme.elevatedButtonTheme.style?.backgroundColor?.resolve({}),
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(8),
+                                          ),
+                                        ),
+                                        onPressed: () => _launchUrl(article['url']),
+                                        child: Text('Read More', style: TextStyle(fontSize: bodyFontSize)),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                    );
-                  },
-                ),
+                      );
+                    },
+                  ),
+      ),
     );
   }
 

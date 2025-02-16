@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:stocks/main.dart'; // Ensure MyHomePage is defined in main.dart or import the correct file
+import 'package:stocks/main.dart'; 
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
