@@ -1,0 +1,103 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+PathAccessException: PathAccessException: Deletion failed, path = 'build\flutter_assets\assets/nifty_stock_sheet.xlsx' (OS Error: The process cannot access the file because it is being used by another process.
+, errno = 32)
+
+```
+#0      _Directory._deleteSync (dart:io/directory_impl.dart:188:7)
+#1      FileSystemEntity.deleteSync (dart:io/file_system_entity.dart:407:7)
+#2      _File._deleteSync (dart:io/file_impl.dart:326:50)
+#3      FileSystemEntity.deleteSync (dart:io/file_system_entity.dart:407:7)
+#4      ForwardingFileSystemEntity.deleteSync (package:file/src/forwarding/forwarding_file_system_entity.dart:70:16)
+#5      ForwardingFileSystemEntity.deleteSync (package:file/src/forwarding/forwarding_file_system_entity.dart:70:16)
+#6      ErrorHandlingFileSystem.deleteIfExists (package:flutter_tools/src/base/error_handling_io.dart:84:14)
+#7      ErrorHandlingFile.copySync.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:361:33)
+#8      _runSync (package:flutter_tools/src/base/error_handling_io.dart:600:14)
+#9      ErrorHandlingFile.copySync (package:flutter_tools/src/base/error_handling_io.dart:345:5)
+#10     writeBundle.<anonymous closure> (package:flutter_tools/src/bundle_builder.dart:234:19)
+<asynchronous suspension>
+#11     Future.wait.<anonymous closure> (dart:async/future.dart:520:21)
+<asynchronous suspension>
+#12     writeBundle (package:flutter_tools/src/bundle_builder.dart:187:3)
+<asynchronous suspension>
+#13     WebDevFS.update (package:flutter_tools/src/isolated/devfs_web.dart:1005:9)
+<asynchronous suspension>
+#14     ResidentWebRunner._updateDevFS (package:flutter_tools/src/isolated/resident_web_runner.dart:580:35)
+<asynchronous suspension>
+#15     ResidentWebRunner.run.<anonymous closure> (package:flutter_tools/src/isolated/resident_web_runner.dart:331:41)
+<asynchronous suspension>
+#16     asyncGuard.<anonymous closure> (package:flutter_tools/src/base/async_guard.dart:111:24)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, 3.27.3, on Microsoft Windows [Version
+    10.0.22631.4890], locale en-IN)
+    [32m•[39m Flutter version 3.27.3 on channel stable at
+      C:\Users\anike\Downloads\flutter_windows_3.24.5-stable\flutter
+    [32m•[39m Upstream repository https://github.com/flutter/flutter.git
+    [32m•[39m Framework revision c519ee916e (4 weeks ago), 2025-01-21
+      10:32:23 -0800
+    [32m•[39m Engine revision e672b006cb
+    [32m•[39m Dart version 3.6.1
+    [32m•[39m DevTools version 2.40.2
+
+[32m[✓][39m Windows Version (Installed version of Windows is version 10 or
+    higher)
+
+[32m[✓][39m Android toolchain - develop for Android devices (Android SDK
+    version 34.0.0)
+    [32m•[39m Android SDK at C:\Users\anike\AppData\Local\Android\sdk
+    [32m•[39m Platform android-34, build-tools 34.0.0
+    [32m•[39m Java binary at: C:\Program Files\Android\Android
+      Studio\jbr\bin\java
+    [32m•[39m Java version OpenJDK Runtime Environment (build
+      21.0.3+-12282718-b509.11)
+    [32m•[39m All Android licenses accepted.
+
+[32m[✓][39m Chrome - develop for the web
+    [32m•[39m Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[31m[✗][39m Visual Studio - develop Windows apps
+    [31m✗[39m Visual Studio not installed; this is necessary to develop
+      Windows apps.
+      Download at https://visualstudio.microsoft.com/downloads/.
+      Please install the "Desktop development with C++" workload,
+      including all of its default components
+
+[32m[✓][39m Android Studio (version 2024.2)
+    [32m•[39m Android Studio at C:\Program Files\Android\Android Studio
+    [32m•[39m Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    [32m•[39m Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    [32m•[39m Java version OpenJDK Runtime Environment (build
+      21.0.3+-12282718-b509.11)
+
+[32m[✓][39m VS Code (version 1.97.2)
+    [32m•[39m VS Code at C:\Users\anike\AppData\Local\Programs\Microsoft VS
+      Code
+    [32m•[39m Flutter extension version 3.104.0
+
+[32m[✓][39m Connected device (3 available)
+    [32m•[39m Windows (desktop) • windows • windows-x64    • Microsoft
+      Windows [Version 10.0.22631.4890]
+    [32m•[39m Chrome (web)      • chrome  • web-javascript • Google Chrome
+      133.0.6943.98
+    [32m•[39m Edge (web)        • edge    • web-javascript • Microsoft Edge
+      133.0.3065.69
+
+[32m[✓][39m Network resources
+    [32m•[39m All expected network resources are available.
+
+[33m![39m Doctor found issues in 1 category.
+```
